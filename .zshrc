@@ -7,14 +7,8 @@ setopt autopushd pushdminus
 unsetopt beep
 bindkey -e
 
-zstyle :compinstall filename '/home/brennen/.zshrc'
-
 autoload -Uz compinit
 compinit
-
-# bpb fucking around below this line, kind of stoned
-# some stuff from:
-# http://stuff.mit.edu/~jdong/misc/zshrc
 
 # grab some colors
 autoload colors zsh/terminfo
@@ -40,7 +34,13 @@ case "$HOST" in
   'hyakutake')
     PR_HOST_COLOR=$PR_LIGHT_BLUE;
     ;;
+  'kodama')
+    PR_HOST_COLOR=$PR_LIGHT_BLUE;
+    ;;
   'beta')
+    PR_HOST_COLOR=$PR_BLUE;
+    ;;
+  'beta-two')
     PR_HOST_COLOR=$PR_BLUE;
     ;;
   'spino')
@@ -50,13 +50,13 @@ case "$HOST" in
     PR_HOST_COLOR=$PR_RED;
     ;;
   *)
-    PR_HOST_COLOR=$PR_BLUE;
+    PR_HOST_COLOR=$PR_WHITE;
     ;;
 esac
 
-# set up ze prompt
+# set up prompt
 export PS1="$PR_HOST_COLOR%n@%m $PR_CYAN%* $PR_YELLOW%d $(parse_git_branch) $PR_NO_COLOR$ "
 
-# common aliases for both shells i actually use
+# common shell aliases
 source ~/.aliases
 
