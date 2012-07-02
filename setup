@@ -1,0 +1,32 @@
+#!/bin/bash
+# Creates symbolic links in ~ for all files in ~/{DOTFILES}
+# ...where {DOTFILES} is the directory of the repository
+
+# Deterine dotfiles directory name
+DOTFILESDIR="${PWD##*/}"
+
+# Loop through directory contents
+for dotfile in `ls -A`
+do
+
+  # Ignore subdirectories
+  if [ -d ~/$DOTFILESDIR/$dotfile ]; then
+    continue
+  fi
+
+  # Only operate on files that start with a dot (.)
+  if [[ $dotfile =~ ^\.[A-Za-z0-9_-]+$ ]]; then
+
+    # Remove existing symbolic link if necessary
+    if [ -f ~/$dotfile ]; then
+        rm ~/$dotfile
+        echo $dotfile :: removing existing link
+    fi
+
+    # Create symbolic link in home directory
+    ln -s ~/${PWD##*/}/$dotfile ~/$dotfile
+    echo $dotfile :: created link
+
+  fi
+
+done

@@ -1,0 +1,8 @@
+alias l='ls -la --color'
+alias n='nano'
+alias e='emacs'
+alias h='dirs -v'
+alias p='ps aux'
+alias v='vpnc'
+alias vd='vpnc-disconnect'
+alias et='rm -rf ~/.local/share/Trash/*'
