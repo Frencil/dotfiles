@@ -30,3 +30,8 @@ do
   fi
 
 done
+
+# Ensure the existence of ~/histfile
+if [ -f ~/histfile ]; then
+  touch ~/histfile
+fi
