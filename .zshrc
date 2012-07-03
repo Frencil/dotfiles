@@ -28,21 +28,32 @@ function parse_git_branch {
 }
 
 case "$HOST" in
+
+  # Dev environments
   'chris-dev')
     PR_HOST_COLOR=$PR_GREEN;
     ;;
-  'hyakutake')
-    PR_HOST_COLOR=$PR_LIGHT_BLUE;
+
+  # Personal machines
+  'Calcifer2')
+    PR_HOST_COLOR=$PR_CYAN;
     ;;
   'kodama')
-    PR_HOST_COLOR=$PR_LIGHT_BLUE;
+    PR_HOST_COLOR=$PR_CYAN;
     ;;
+  'kamajii')
+    PR_HOST_COLOR=$PR_CYAN;
+    ;;
+
+  # Beta environments
   'beta')
     PR_HOST_COLOR=$PR_BLUE;
     ;;
   'beta-two')
     PR_HOST_COLOR=$PR_BLUE;
     ;;
+
+  # Production environments
   'spino')
     PR_HOST_COLOR=$PR_RED;
     ;;
@@ -50,8 +61,11 @@ case "$HOST" in
     PR_HOST_COLOR=$PR_RED;
     ;;
   *)
+
+  # Default
     PR_HOST_COLOR=$PR_WHITE;
     ;;
+
 esac
 
 # set up prompt
