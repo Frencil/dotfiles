@@ -44,3 +44,7 @@
 
 ;; death to tabs
 (setq-default indent-tabs-mode nil)
+
+;; key bindings
+(global-set-key "\C-l" 'goto-line)
+(global-set-key [f2] 'split-window-vertically) 
