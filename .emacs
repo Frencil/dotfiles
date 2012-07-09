@@ -42,3 +42,5 @@
   ;; If there is more than one, they won't work right.
  )
 
+;; death to tabs
+(setq-default indent-tabs-mode nil)
