@@ -2,7 +2,8 @@ set nocompatible
 
 " <VUNDLE> ... The Vim plugin bundler
 
-    " Check that Vundle is cloned on this machine. If it isn't, clone it.    
+    " Check that Vundle is cloned on this machine. If it isn't, clone it.
+    " Credit: Erik Zaadi http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
     let iCanHazVundle=1
     let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
     if !filereadable(vundle_readme)
