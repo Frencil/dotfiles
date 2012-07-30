@@ -44,7 +44,18 @@
 
 ;; death to tabs
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq indent-line-function 'insert-tab)
+(put 'upcase-region 'disabled nil)
 
 ;; key bindings
 (global-set-key "\C-l" 'goto-line)
 (global-set-key [f2] 'split-window-vertically) 
+
+; Org-mode stuff
+(require 'org-install)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
