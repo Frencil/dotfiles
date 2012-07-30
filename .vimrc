@@ -1,44 +1,57 @@
 set nocompatible
 
-" set up vundle to manage plugins
-" https://github.com/gmarik/vundle
-" to use:
-" git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-" <vundle>
+" <VUNDLE> ... The Vim plugin bundler
 
-  filetype off
+    " Check that Vundle is cloned on this machine. If it isn't, clone it.    
+    let iCanHazVundle=1
+    let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+    if !filereadable(vundle_readme)
+        echo "Installing Vundle.."
+        echo ""
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        let iCanHazVundle=0
+    endif
 
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
+    " Initialize Vundle
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
 
-  " let Vundle manage Vundle - required
-  Bundle 'gmarik/vundle'
+    " ALL THE BUNDLES...
+    " Required - let vundle manage vundle
+    Bundle 'gmarik/vundle'
 
-  " really nice file tree:
-  Bundle 'scrooloose/nerdtree'
+    " File tree
+    Bundle 'scrooloose/nerdtree'
 
-  " align text vertically on a string:
-  Bundle 'Align'
+    " align text vertically on a string
+    Bundle 'Align'
 
-  " wrap common version control commands:
-  Bundle 'vcscommand.vim'
-  Bundle 'tpope/vim-fugitive'
+    " wrap common version control commands
+    Bundle 'vcscommand.vim'
+    Bundle 'tpope/vim-fugitive'
 
-  " a bunch of colorschemes + a gui menu listing them
-  Bundle 'flazz/vim-colorschemes'
-  Bundle 'altercation/vim-colors-solarized'
-  Bundle 'ColorSchemeMenuMaker'
-  Bundle 'desert-warm-256'
+    " a bunch of colorschemes + a gui menu listing them
+    Bundle 'flazz/vim-colorschemes'
+    Bundle 'altercation/vim-colors-solarized'
+    Bundle 'ColorSchemeMenuMaker'
+    Bundle 'desert-warm-256'
 
-  " match lots of things
-  Bundle 'edsono/vim-matchit'
+    " match lots of things
+    Bundle 'edsono/vim-matchit'
 
-  Bundle 'L9'
-  Bundle 'FuzzyFinder'
-  Bundle 'ervandew/supertab'
+    Bundle 'L9'
+    Bundle 'FuzzyFinder'
+    Bundle 'ervandew/supertab'
+    Bundle 'Syntastic'
 
-
-" </vundle>
+    "...All the other bundles...
+    if iCanHazVundle == 0
+        echo "Installing Bundles, please ignore key map error messages"
+        echo ""
+        :BundleInstall
+    endif
+" </VUNDLE>
 
 set title
 
