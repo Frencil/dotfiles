@@ -19,8 +19,18 @@ sx() { ssh -AX chris@"$@"; }
 # misc
 alias et='rm -rf ~/.local/share/Trash/*'
 
+# tailing nginx log
+tl() {
+  local TLINES=50
+  if [[ $@ = [0-9]* ]]; then
+    local TLINES="$@"
+  fi
+  sudo tail -n "$TLINES" /var/www/nginx/error.log
+}
+
 # git
 gb()  { git branch; }
+gf()  { git fetch; }
 gc()  { git commit -a; }
 gco() { git checkout "$@"; }
 gcb() { git checkout -t origin/"$@"; }
