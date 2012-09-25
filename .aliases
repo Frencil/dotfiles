@@ -25,7 +25,7 @@ tl() {
   if [[ $@ = [0-9]* ]]; then
     local TLINES="$@"
   fi
-  sudo tail -n "$TLINES" /var/www/nginx/error.log
+  sudo tail -n "$TLINES" /var/log/nginx/error.log
 }
 
 # git
