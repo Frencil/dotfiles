@@ -59,3 +59,5 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+; Tramp-mode (remote editing)
+(setq tramp-default-method "ssh")
