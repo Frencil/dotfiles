@@ -19,14 +19,27 @@ sx() { ssh -AX chris@"$@"; }
 # misc
 alias et='rm -rf ~/.local/share/Trash/*'
 
-# tailing nginx log
+# tailing webserver logs
+# nginx:  tln, tl
+# apache: tla
 tl() {
+  tln
+}
+tln() {
   local TLINES=50
   if [[ $@ = [0-9]* ]]; then
     local TLINES="$@"
   fi
   sudo tail -n "$TLINES" /var/log/nginx/error.log
 }
+tla() {
+  local TLINES=50
+  if [[ $@ = [0-9]* ]]; then
+    local TLINES="$@"
+  fi
+  sudo tail -n "$TLINES" /var/log/apache2/error.log
+}
+
 
 # git
 gb()  { git branch; }

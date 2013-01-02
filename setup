@@ -2,6 +2,9 @@
 # Creates symbolic links in ~ for all files in ~/{DOTFILES}
 # ...where {DOTFILES} is the directory of the repository
 
+# Force running from the scripts directory
+cd "$(dirname "$0")"
+
 # Deterine dotfiles directory name
 DOTFILESDIR="${PWD##*/}"
 
