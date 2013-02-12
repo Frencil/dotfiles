@@ -14,7 +14,9 @@ alias vd='vpnc-disconnect'
 
 # ssh
 s() { ssh chris@"$@"; }
-sx() { ssh -AX chris@"$@"; }
+sa() { ssh -A chris@"$@"; }
+sx() { ssh -X chris@"$@"; }
+sax() { ssh -AX chris@"$@"; }
 
 # misc
 alias et='rm -rf ~/.local/share/Trash/*'
