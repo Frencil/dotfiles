@@ -43,13 +43,17 @@ tla() {
 }
 
 
-# git
+# Git aliases
 gb()  { git branch; }
 gf()  { git fetch; }
 gc()  { git commit -a; }
 gco() { git checkout "$@"; }
 gcb() { git checkout -t origin/"$@"; }
+# Git: variations on pull
 gp()  { git pull origin "$@"; git submodule update --init --recursive; git submodule sync; }
 gpm() { gp master; }
+gpb() { gp `git rev-parse --abbrev-ref HEAD` }
+# Git: variations on push
 gs()  { git push origin "$@"; }
 gsm() { gs master; }
+gsb() { gs `git rev-parse --abbrev-ref HEAD` }
