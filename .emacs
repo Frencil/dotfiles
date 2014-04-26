@@ -31,6 +31,11 @@
 (custom-set-variables '(inhibit-startup-screen t))
 (custom-set-faces)
 
+; hook to force javascript tab sizes to two spaces
+(add-hook 'javascript-mode-hook 
+  '(lambda() 
+    (setq tab-width 4)))
+
 ; define tabs as two spaces
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
