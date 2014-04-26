@@ -63,4 +63,4 @@
 (setq tramp-default-method "ssh")
 
 ; Smaller monospaced font
-(set-face-attribute 'default nil :font "Droid Sans Mono-10")
+(set-face-attribute 'default nil :height 100)
