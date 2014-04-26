@@ -11,7 +11,6 @@
 	  (select-window (posn-window (event-start event)))
 	  (scroll-up 2))
       (select-window current-window))))
-
 (defun sd-mousewheel-scroll-down (event)
   "Scroll window under mouse down by five lines."
   (interactive "e")
@@ -29,26 +28,16 @@
 (require 'php-mode)
 (require 'html-helper-mode)
 (require 'css-mode)
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
+(custom-set-variables '(inhibit-startup-screen t))
+(custom-set-faces)
 
-;; death to tabs
+; define tabs as two spaces
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
 (put 'upcase-region 'disabled nil)
 
-;; key bindings
+; key bindings
 (global-set-key "\C-l" 'goto-line)
 (global-set-key [f2] 'split-window-vertically) 
 
