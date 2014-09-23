@@ -31,25 +31,22 @@ case "$HOST" in
 
   # Dev environments
   'chris-dev')
-    PR_HOST_COLOR=$PR_GREEN;
+    PR_HOST_COLOR=$PR_CYAN;
     ;;
 
   # Personal machines
-  'Calcifer2')
-    PR_HOST_COLOR=$PR_CYAN;
-    ;;
   'kodama')
-    PR_HOST_COLOR=$PR_CYAN;
+    PR_HOST_COLOR=$PR_GREEN;
+    ;;
+  'Okkoto')
+    PR_HOST_COLOR=$PR_GREEN;
     ;;
   'kamajii')
-    PR_HOST_COLOR=$PR_CYAN;
+    PR_HOST_COLOR=$PR_GREEN;
     ;;
 
   # Beta environments
   'beta')
-    PR_HOST_COLOR=$PR_BLUE;
-    ;;
-  'beta-two')
     PR_HOST_COLOR=$PR_BLUE;
     ;;
 
@@ -58,6 +55,9 @@ case "$HOST" in
     PR_HOST_COLOR=$PR_RED;
     ;;
   'seismo')
+    PR_HOST_COLOR=$PR_RED;
+    ;;
+  'ps266333')
     PR_HOST_COLOR=$PR_RED;
     ;;
   *)
