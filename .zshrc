@@ -71,6 +71,9 @@ esac
 # set up prompt
 export PS1="$PR_HOST_COLOR%n@%m $PR_CYAN%* $PR_YELLOW%d $(parse_git_branch) $PR_NO_COLOR$ "
 
-# common shell aliases
-source ~/.aliases
+# bind up and down arrows for history search
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
 
+# load custom shell aliases
+source ~/.aliases

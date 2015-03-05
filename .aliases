@@ -57,3 +57,6 @@ gpb() { gp `git rev-parse --abbrev-ref HEAD` }
 gs()  { git push origin "$@"; }
 gsm() { gs master; }
 gsb() { gs `git rev-parse --abbrev-ref HEAD` }
+
+# Force python3
+alias python=python3
