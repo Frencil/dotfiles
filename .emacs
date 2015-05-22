@@ -26,8 +26,7 @@
 
 ; programming modes
 (require 'php-mode)
-(require 'html-helper-mode)
-(require 'css-mode)
+(require 'python-mode)
 (custom-set-variables '(inhibit-startup-screen t))
 (custom-set-faces)
 
@@ -55,6 +54,3 @@
 
 ; Tramp-mode (remote editing)
 (setq tramp-default-method "ssh")
-
-; Smaller monospaced font
-(set-face-attribute 'default nil :height 75)
