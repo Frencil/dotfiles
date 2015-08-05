@@ -26,7 +26,6 @@
 
 ; programming modes
 (require 'php-mode)
-(require 'python-mode)
 (custom-set-variables '(inhibit-startup-screen t))
 (custom-set-faces)
 
