@@ -35,13 +35,16 @@ case "$HOST" in
     ;;
 
   # Personal machines
-  'kodama')
-    PR_HOST_COLOR=$PR_GREEN;
-    ;;
   'Okkoto')
     PR_HOST_COLOR=$PR_GREEN;
     ;;
   'kamajii')
+    PR_HOST_COLOR=$PR_GREEN;
+    ;;
+  'Iboshi')
+    PR_HOST_COLOR=$PR_GREEN;
+    ;;
+  'Ashitaka')
     PR_HOST_COLOR=$PR_GREEN;
     ;;
 
@@ -51,13 +54,7 @@ case "$HOST" in
     ;;
 
   # Production environments
-  'spino')
-    PR_HOST_COLOR=$PR_RED;
-    ;;
-  'seismo')
-    PR_HOST_COLOR=$PR_RED;
-    ;;
-  'ps266333')
+  'wonderland')
     PR_HOST_COLOR=$PR_RED;
     ;;
   *)
