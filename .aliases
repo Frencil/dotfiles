@@ -21,6 +21,9 @@ sax() { ssh -AX chris@"$@"; }
 # misc
 alias et='rm -rf ~/.local/share/Trash/*'
 
+# python-based command line json formatter
+alias jsonv='python -m json.tool'
+
 # tailing webserver logs
 # nginx:  tln, tl
 # apache: tla
