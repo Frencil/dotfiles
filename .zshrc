@@ -31,10 +31,10 @@ case "$HOST" in
 
   # Dev environments
   'gfg-dev-chriclrk')
-    PR_HOST_COLOR=$PR_CYAN;
+    PR_HOST_COLOR=$PR_MAGENTA;
     ;;
   'gfg-dev-kevinwli')
-    PR_HOST_COLOR=$PR_CYAN;
+    PR_HOST_COLOR=$PR_MAGENTA;
     ;;
 
   # Personal machines
