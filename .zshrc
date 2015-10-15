@@ -30,7 +30,10 @@ function parse_git_branch {
 case "$HOST" in
 
   # Dev environments
-  'chris-dev')
+  'gfg-dev-chriclrk')
+    PR_HOST_COLOR=$PR_CYAN;
+    ;;
+  'gfg-dev-kevinwli')
     PR_HOST_COLOR=$PR_CYAN;
     ;;
 
@@ -38,28 +41,36 @@ case "$HOST" in
   'Okkoto')
     PR_HOST_COLOR=$PR_GREEN;
     ;;
-  'kamajii')
-    PR_HOST_COLOR=$PR_GREEN;
-    ;;
-  'Iboshi')
+  'Eboshi')
     PR_HOST_COLOR=$PR_GREEN;
     ;;
   'Ashitaka')
     PR_HOST_COLOR=$PR_GREEN;
     ;;
 
-  # Beta environments
-  'beta')
+  # Beta / Staging environments
+  'gfg-staging')
     PR_HOST_COLOR=$PR_BLUE;
     ;;
 
   # Production environments
-  'wonderland')
+  'gfg-app')
     PR_HOST_COLOR=$PR_RED;
     ;;
-  *)
+  'gfg-db-questionnaire')
+    PR_HOST_COLOR=$PR_RED;
+    ;;
+
+  # Other environments
+  'wonderland')
+    PR_HOST_COLOR=$PR_YELLOW;
+    ;;
+  'gfg-data')
+    PR_HOST_COLOR=$PR_YELLOW;
+    ;;
 
   # Default
+  *)
     PR_HOST_COLOR=$PR_WHITE;
     ;;
 
@@ -74,3 +85,7 @@ bindkey "^[[B" history-search-forward
 
 # load custom shell aliases
 source ~/.aliases
+
+# Python Virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
