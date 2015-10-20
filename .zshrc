@@ -60,6 +60,9 @@ case "$HOST" in
   'gfg-db-questionnaire')
     PR_HOST_COLOR=$PR_RED;
     ;;
+  'gfg-dispatcher')
+    PR_HOST_COLOR=$PR_RED;
+    ;;
 
   # Other environments
   'wonderland')
