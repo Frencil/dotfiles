@@ -53,13 +53,14 @@ gc()  { git commit -a; }
 gco() { git checkout "$@"; }
 gcb() { git checkout -t origin/"$@"; }
 # Git: variations on pull
-gp()  { git pull --rebase origin "$@"; git submodule update --init --recursive; git submodule sync; }
+gp()  { git pull origin "$@"; }
 gpm() { gp master; }
 gpb() { gp `git rev-parse --abbrev-ref HEAD` }
+gpr()  { git pull --rebase origin "$@"; git submodule update --init --recursive; git submodule sync; }
+gprm() { gpr master; }
+gprb() { gpr `git rev-parse --abbrev-ref HEAD` }
 # Git: variations on push
 gs()  { git push origin "$@"; }
 gsm() { gs master; }
 gsb() { gs `git rev-parse --abbrev-ref HEAD` }
 
-# Force python3
-alias python=python3
