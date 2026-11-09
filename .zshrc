@@ -63,6 +63,10 @@ case "$HOST" in
   'gfg-dispatcher')
     PR_HOST_COLOR=$PR_RED;
     ;;
+  *vps*)
+    # Any VPS host (matched by pattern to keep real hostnames out of this repo)
+    PR_HOST_COLOR=$PR_RED;
+    ;;
 
   # Other environments
   'wonderland')
